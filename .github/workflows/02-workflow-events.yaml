@@ -7,6 +7,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: show the trigger event
-          run: "i am trigered by ${{github.event_name}}"
+          run: echo "i am trigered by ${{github.event_name}}"
 
 
