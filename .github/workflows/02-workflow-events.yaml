@@ -1,0 +1,12 @@
+name: 02-building blocks
+
+on: push
+
+jobs: 
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+        - name: show the trigger event
+          run: "i am trigered by ${{github.event_name}}"
+
+
