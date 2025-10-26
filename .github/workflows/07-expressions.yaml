@@ -21,5 +21,5 @@ jobs:
               if: ${{inputs.debug && github.ref == 'refs/heads/main'}}
               run: echo "i was triggered from main"
             - name: echo message
-              run: "hello, world"
+              run: echo "hello, world"
 
