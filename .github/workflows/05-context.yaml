@@ -1,13 +1,6 @@
 name: 05 context
-run-name: 06 context | DEBUG - ${{inputs.debug}}
-on: 
-   push:
-   workflow_dispatch:
-     inputs:
-        debug:
-          type: boolean
-          default: false
 
+on: workflow_dispatch
 
 jobs:
     eco-data:
@@ -24,7 +17,6 @@ jobs:
                 echo "github Run iD: ${{github.run_number}}"
             - name : display vars
               run: |
-                echo "varialbe value : ${{vars.MY_VAR}}"
-
+              
 
 
