@@ -1,0 +1,17 @@
+name: github events
+
+on: 
+  pull_request:
+    types:
+        - opened
+        - synchronize
+    branches:
+        - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "running this job based on pr either open or sync AND branch is main"
+
+
