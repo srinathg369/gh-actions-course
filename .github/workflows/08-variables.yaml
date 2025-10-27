@@ -45,6 +45,6 @@ jobs:
          steps:
             - name: undefined vars calling
               run: |
-                echo "undefined var: ${{env.UNDEFINED_VAR}}"
+                echo "undefined var: ${{env.UNDEFINED_VAR_WITH_DEFAULT}}"
 
               
