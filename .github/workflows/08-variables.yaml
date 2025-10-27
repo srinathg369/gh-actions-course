@@ -1,11 +1,13 @@
 name: 08-variables
 
 on:
+ push:
  workflow_dispatch: 
 
 env:
   OVERRIDE_VAR: "i am at gitflow level"
   WORKFLOW_VAR: " in am workflow var"
+  UNDEFINED_VAR_WITH_DEFAULT: ${{vars.UNDEFINED_VAR || 'default'}}
 
 jobs:
     echo:
@@ -21,5 +23,28 @@ jobs:
                 echo "step var: ${{env.STEP_VAR}}"
                 echo "overddie var: ${{env.OVERRIDE_VAR}}"
                 echo "workflow var: ${{env.WORKFLOW_VAR}}"
+
+    echo2:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: print variables
+              run: |
+                echo "repo var: ${{vars.REPO_VAR}}"
+    
+    echo-usprod:
+        runs-on: ubuntu-latest
+        environment: prod
+        steps:
+            - name: prod environment usage
+              run: |
+                echo "prod var target : ${{vars.TARGET_VAR}}"
+                echo "prod var overwrite: ${{vars.OVERWRITTEN_VAR}}"
+    
+    echo-undefined:
+         runs-on: ubuntu-latest
+         steps:
+            - name: undefined vars calling
+              run: |
+                echo "undefined var: ${{env.UNDEFINED_VAR}}"
 
               
