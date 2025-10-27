@@ -1,0 +1,21 @@
+name: 08-variables
+
+on:
+ push:
+ workflow_dispatch: 
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        env:
+          OVERRIDE_VAR: "i am at Job Level"
+        steps: 
+            - name: print variables
+              env:
+                STEP_VAR: "i am step variable"
+                OVERRIDE_VAR: "i am at step level"
+              run: |
+                echo "step var: ${{env.STEP_VAR}}"
+                echi "overddie var: ${{env.OVERRIDE_VAR}}"
+
+              
