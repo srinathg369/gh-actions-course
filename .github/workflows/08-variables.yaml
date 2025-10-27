@@ -16,6 +16,6 @@ jobs:
                 OVERRIDE_VAR: "i am at step level"
               run: |
                 echo "step var: ${{env.STEP_VAR}}"
-                echi "overddie var: ${{env.OVERRIDE_VAR}}"
+                echo "overddie var: ${{env.OVERRIDE_VAR}}"
 
               
