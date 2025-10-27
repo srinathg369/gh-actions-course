@@ -1,5 +1,6 @@
 name: 08-variables
-
+env:
+  OVERRIDE_VAR: "i am at gitflow level"
 on:
  push:
  workflow_dispatch: 
