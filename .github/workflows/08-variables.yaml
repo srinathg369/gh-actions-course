@@ -1,9 +1,12 @@
 name: 08-variables
-env:
-  OVERRIDE_VAR: "i am at gitflow level"
+
 on:
  push:
  workflow_dispatch: 
+
+env:
+  OVERRIDE_VAR: "i am at gitflow level"
+  WORKFLOW_VAR: " in am workflow var"
 
 jobs:
     echo:
@@ -18,5 +21,6 @@ jobs:
               run: |
                 echo "step var: ${{env.STEP_VAR}}"
                 echo "overddie var: ${{env.OVERRIDE_VAR}}"
+                echo "workflow var: ${{env.WORKFLOW_VAR}}"
 
               
