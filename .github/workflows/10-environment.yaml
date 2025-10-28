@@ -17,4 +17,4 @@ jobs:
     steps:
       - name:  eco vars
         run: |
-           eco "env variable: ${{ env.my-env-value}}"
+           echo "env variable: ${{ env.my-env-value}}"
