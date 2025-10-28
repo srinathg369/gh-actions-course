@@ -1,7 +1,6 @@
 name: 09-functions-examples
 
 on: 
-  push:
   pull_request:
   workflow_dispatch:
 
@@ -12,7 +11,7 @@ jobs:
         - name: failing step
           run: |
             echo " i am failed step"
-            exit 1
+            exit 0
         - name: i will execute when prev step is success
           if: ${{success()}}
           run: echo " i will only run only when prev step is success"
