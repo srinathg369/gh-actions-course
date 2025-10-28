@@ -1,6 +1,5 @@
 name: 07 expressions
-on: 
-  push:
+on:
   workflow_dispatch:
      inputs:
         debug: 
