@@ -1,4 +1,4 @@
-name: 09-functions examples
+name: 09-functions-examples
 
 on: 
   pull_request:
