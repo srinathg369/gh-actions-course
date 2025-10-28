@@ -8,6 +8,8 @@ jobs:
    echo1:
      runs-on: ubuntu-latest
      steps:
+        - name: sleeping 
+          run: sleep 20
         - name: failing step
           run: |
             echo " i am failed step"
