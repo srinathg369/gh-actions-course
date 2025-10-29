@@ -1,4 +1,4 @@
-name: 18.1 reusable workflow
+name: 18-1-reusable-workflow
 
 on:
   workflow_call:
