@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy:
-    uses: ./.github/workflows/18-1-reusable-workflow.yaml
+    uses: srinathgattugari/github-actions-demo/.github/workflows/18-1-reusable-workflow.yaml@main
     with:
       target_directory: dummy-dir
 
