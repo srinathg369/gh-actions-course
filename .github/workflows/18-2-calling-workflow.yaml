@@ -6,7 +6,7 @@ on:
 
 jobs: 
   deploy:
-     uses: ./.github/workflows/18-1-reusable-workflow.yaml
+     uses: ./.github/workflows/18-1-resusable-workflow.yaml
      with:
         target-directory: dummy-dir
   print-outputs:
